@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Paleta Moderna - Dark & Light</title>
+  <style>
+    :root {
+      --bg-dark: #0F172A;
+      --secondary-dark: #1E293B;
+      --primary-dark: #38BDF8;
+      --text-dark: #F1F5F9;
+      --accent-dark: #3B82F6;
+
+      --bg-light: #F8FAFC;
+      --secondary-light: #E2E8F0;
+      --primary-light: #2563EB;
+      --text-light: #0F172A;
+      --accent-light: #3B82F6;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 3rem auto;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .colors {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .color {
+      flex: 1 1 30%;
+      height: 60px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    /* Dark Theme */
+    body.dark {
+      background-color: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    .dark .container {
+      background-color: var(--secondary-dark);
+    }
+
+    .dark .color:nth-child(1) { background-color: var(--bg-dark); }
+    .dark .color:nth-child(2) { background-color: var(--secondary-dark); }
+    .dark .color:nth-child(3) { background-color: var(--primary-dark); }
+    .dark .color:nth-child(4) { background-color: var(--text-dark); color: #000; }
+    .dark .color:nth-child(5) { background-color: var(--accent-dark); }
+
+    /* Light Theme */
+    body.light {
+      background-color: var(--bg-light);
+      color: var(--text-light);
+    }
+
+    .light .container {
+      background-color: var(--secondary-light);
+    }
+
+    .light .color:nth-child(1) { background-color: var(--bg-light); color: #000; }
+    .light .color:nth-child(2) { background-color: var(--secondary-light); color: #000; }
+    .light .color:nth-child(3) { background-color: var(--primary-light); color: #fff; }
+    .light .color:nth-child(4) { background-color: var(--text-light); color: #fff; }
+    .light .color:nth-child(5) { background-color: var(--accent-light); color: #fff; }
+
+    button {
+      margin: 1rem auto;
+      display: block;
+      padding: 0.6rem 1.2rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background-color: #38BDF8;
+      color: white;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #0ea5e9;
+    }
+  </style>
+</head>
+<body class="dark">
+  <button onclick="toggleTheme()">Cambiar Modo</button>
+
+  <div class="container">
+    <h1>Paleta Moderna - <span id="theme-label">Modo Oscuro</span></h1>
+    <div class="colors">
+      <div class="color">BG</div>
+      <div class="color">Secondary</div>
+      <div class="color">Primary</div>
+      <div class="color">Text</div>
+      <div class="color">Accent</div>
+    </div>
+  </div>
+
+  <script>
+    function toggleTheme() {
+      const body = document.body;
+      const label = document.getElementById('theme-label');
+      if (body.classList.contains('dark')) {
+        body.classList.replace('dark', 'light');
+        label.textContent = 'Modo Claro';
+      } else {
+        body.classList.replace('light', 'dark');
+        label.textContent = 'Modo Oscuro';
+      }
+    }
+  </script>
+</body>
+</html>
