@@ -1,6 +1,6 @@
 function Footer () {
   return (
-    <footer className='bg-gray-800 text-white p-4 text-center'>
+    <footer className='p-4 text-center bg-[var(--surface)]'>
       <p>&copy; {new Date().getFullYear()} Isaac Vergara. All rights reserved.</p>
       <p>Designed & Developed by Isaac Vergara.</p>
       <div>
@@ -11,7 +11,7 @@ function Footer () {
               const theme = e.target.value
               document.documentElement.classList.toggle('dark-theme', theme === 'dark')
             }}
-            className='ml-2 px-3 py-1 rounded bg-gray-700 text-white'
+            className='ml-2 px-3 py-1 rounded bg-[var(--text)] text-[var(--bg)]'
           >
             <option value='' />
             <option value='light'>Light</option>
