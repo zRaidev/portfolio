@@ -1,5 +1,8 @@
 import { useState, useEffect } from 'react'
 import './Hero.css'
+import lightGithubIcon from '../assets/GitHub_dark.svg'
+import lightLinkedinIcon from '../assets/linkedin_dark.svg'
+import lightXIcon from '../assets/x_dark.svg'
 
 const words = ['Web Developer', 'Frontend Developer', 'Software Engineer Student']
 const typingSpeed = 150 // ms por carácter
@@ -35,17 +38,22 @@ function Hero () {
     return () => clearTimeout(timeout)
   }, [displayText, isDeleting, currentWordIndex])
   return (
-    <section className='flex flex-col items-center justify-center h-screen'>
+    <section id='home' className='flex flex-col items-center justify-center h-screen'>
       <div className='block w-150 text-left'>
-        <h2 className='text-5xl font-semibold'>Hi there!</h2>
-        <div>
+        <h2 className='text-5xl font-semibold -mt-28'>Hi there!</h2>
+        <div className='mt-6'>
           <h2 className='inline text-5xl font-semibold'>I'm </h2><h1 className='inline text-5xl font-bold'>Isaac Vergara</h1>
         </div>
-        <h2>
+        <h2 className='mt-6'>
           <span className="relative text-5xl font-semibold text-[--text] after:content-['|'] after:animate-blink">
             {displayText}
           </span>
         </h2>
+        <div className='flex justify-start mt-10 gap-8 w-5 cursor-pointer'>
+          <img src={lightGithubIcon} alt='GitHub link' />
+          <img src={lightLinkedinIcon} alt='LinkedIn link' />
+          <img src={lightXIcon} alt='X (formerly twitter) link' />
+        </div>
       </div>
     </section>
   )
