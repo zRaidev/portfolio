@@ -1,5 +1,5 @@
 import BentoGrid from './BentoGrid.jsx'
-import ProfilePicture from '../assets/LinkedInProfile.webp'
+import ProfilePicture from '../assets/linkedin-profile.webp'
 
 function AboutMe () {
   return (
