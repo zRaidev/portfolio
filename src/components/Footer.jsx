@@ -3,7 +3,7 @@ function Footer () {
     <footer className='p-4 text-center bg-[var(--surface)]'>
       <p>&copy; {new Date().getFullYear()} Isaac Vergara. All rights reserved.</p>
       <p>Designed & Developed by Isaac Vergara.</p>
-      <div>
+      <div className='flex justify-center items-center gap-4 mt-2'>
         <div>
           <span>Choose theme</span>
           <select
@@ -11,7 +11,7 @@ function Footer () {
               const theme = e.target.value
               document.documentElement.classList.toggle('dark-theme', theme === 'dark')
             }}
-            className='ml-2 px-3 py-1 rounded bg-[var(--text)] text-[var(--bg)]'
+            className='ml-2 px-1 py-0.5 text-[var(--bg)]'
           >
             <option value='' />
             <option value='light'>Light</option>
@@ -20,8 +20,14 @@ function Footer () {
         </div>
         <div>
           <span>Choose language</span>
+          <select className='ml-2 px-1 py-0.5 text-[var(--bg)]'>
+            <option value='light'>English</option>
+            <option value='dark'>Spanish</option>
+          </select>
         </div>
-
+      </div>
+      <div className='mt-1'>
+        <a className='text-gray-400' href='https://github.com/zRaidev/portfolio' target='__blank' rel='noopener noreferrer'>Visit my portfolio on Github</a>
       </div>
     </footer>
   )
