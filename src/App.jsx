@@ -7,7 +7,7 @@ function App () {
   return (
     <>
       <Header />
-      <main>
+      <main className='max-w-4/5 mx-auto'>
         <Hero />
         <AboutMe />
       </main>
