@@ -1,6 +1,7 @@
 import Header from './components/Header.jsx'
 import Footer from './components/Footer.jsx'
 import Hero from './components/Hero.jsx'
+import AboutMe from './components/AboutMe.jsx'
 
 function App () {
   return (
@@ -8,6 +9,7 @@ function App () {
       <Header />
       <main>
         <Hero />
+        <AboutMe />
       </main>
       <Footer />
     </>

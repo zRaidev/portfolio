@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #F8FAFC;
+  --bg: linear-gradient(135deg, #915eff, #7b68ee, #3f2b96, #1e1e3f);
   --surface: #E2E8F0;
   --primary: #2563EB;
   --text: #0F172A;
@@ -10,7 +10,7 @@
 
 /* Tema oscuro */
 .dark-theme {
-  --bg: #0F172A;
+  --bg: radial-gradient(circle at top, #4e0eff, #1f1f47, #0a0a2a);
   --surface: #1E293B;
   --primary: #38BDF8;
   --text: #F1F5F9;
