@@ -5,7 +5,7 @@ import './Projects.css'
 
 function Projects () {
   return (
-    <section id='projects' className='px-10 h-[100vh]'>
+    <section id='projects' className='h-[100vh]'>
       <h2 className='flex justify-center text-5xl font-semibold mb-15'>Projects</h2>
       <div className='grid grid-cols-2 gap-8'>
         <BentoGrid>
