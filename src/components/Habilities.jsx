@@ -1,11 +1,11 @@
-import Bento from './BentoGrid.jsx'
+import BentoGrid from './BentoGrid.jsx'
 
 function Habilities () {
   return (
     <section id='habilities' className='pb-20'>
       <h2 className='flex justify-center text-5xl font-semibold mb-15'>Habilities</h2>
       <div className='grid grid-cols-2 gap-10'>
-        <Bento>
+        <BentoGrid>
           <h3 className='text-2xl mb-10'>Technologies</h3>
           <div className='grid grid-cols-2'>
             <div className='flex justify-center items-center flex-col mb-6'>
@@ -33,8 +33,8 @@ function Habilities () {
               <h4>Tailwind CSS</h4>
             </div>
           </div>
-        </Bento>
-        <Bento>
+        </BentoGrid>
+        <BentoGrid>
           <h3 className='text-2xl mb-10'>Tools</h3>
           <div className='grid grid-cols-2'>
             <div className='flex justify-center items-center flex-col mb-6'>
@@ -62,7 +62,7 @@ function Habilities () {
               <h4>Illustrator</h4>
             </div>
           </div>
-        </Bento>
+        </BentoGrid>
       </div>
     </section>
   )
