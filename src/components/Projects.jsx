@@ -1,7 +1,6 @@
 import BentoGrid from './BentoGrid'
-import MathTestImage from '../assets/mathtest.webp'
-import PersonalProfileImage from '../assets/personal-profile.webp'
-import './Projects.css'
+import MathTestImage from '../assets/images/mathtest.webp'
+import PersonalProfileImage from '../assets/images/personal-profile.webp'
 
 function Projects () {
   return (

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import './Hero.css'
+import '../assets/styles/Hero.css'
 
 const words = ['Web Developer', 'Frontend Developer', 'Software Engineer Student']
 const typingSpeed = 150 // ms por carácter
