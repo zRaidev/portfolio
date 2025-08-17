@@ -1,4 +1,4 @@
-import BentoGrid from './BentoGrid'
+import BentoGrid from '../components/BentoGrid'
 import MathTestImage from '../assets/images/mathtest.webp'
 import PersonalProfileImage from '../assets/images/personal-profile.webp'
 

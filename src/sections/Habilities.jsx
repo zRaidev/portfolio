@@ -1,4 +1,4 @@
-import BentoGrid from './BentoGrid.jsx'
+import BentoGrid from '../components/BentoGrid.jsx'
 
 function Habilities () {
   return (
