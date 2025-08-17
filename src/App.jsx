@@ -1,10 +1,10 @@
 import Header from './components/Header.jsx'
 import Footer from './components/Footer.jsx'
-import Hero from './components/Hero.jsx'
-import AboutMe from './components/AboutMe.jsx'
-import Projects from './components/Projects.jsx'
-import Habilities from './components/Habilities.jsx'
-import Contact from './components/Contact.jsx'
+import Hero from './sections/Hero.jsx'
+import AboutMe from './sections/AboutMe.jsx'
+import Projects from './sections/Projects.jsx'
+import Habilities from './sections/Habilities.jsx'
+import Contact from './sections/Contact.jsx'
 
 function App () {
   return (
