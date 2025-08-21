@@ -1,4 +1,4 @@
-import Header from './components/Header.jsx'
+import Navbar from './components/Navbar.jsx'
 import Footer from './components/Footer.jsx'
 import Hero from './sections/Hero.jsx'
 import AboutMe from './sections/AboutMe.jsx'
@@ -9,7 +9,7 @@ import Contact from './sections/Contact.jsx'
 function App () {
   return (
     <>
-      <Header />
+      <Navbar />
       <main className='max-w-5xl mx-auto'>
         <Hero />
         <AboutMe />
