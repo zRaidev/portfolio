@@ -1,14 +1,25 @@
 function Navbar () {
+  const sections = ['home', 'about-me', 'projects', 'habilities', 'contact']
   return (
-    <div className='w-full h-16'>
-      <header className='fixed top-0 left-0 w-full h-16 flex items-center justify-between px-4 z-50'>
-        <nav className='w-2/5 h-10 justify-center mx-auto'>
-          <ul className='flex justify-around text-[var(--text)] align-middle bg-[var(--surface)] px-2 py-2 rounded-2xl select-none'>
-            <li><a href='#home'>Home</a></li>
-            <li><a href='#about-me'>About Me</a></li>
-            <li><a href='#projects'>Projects</a></li>
-            <li><a href='#habilities'>Habilities</a></li>
-            <li><a href='#contact'>Contact</a></li>
+    <div className='w-full'>
+      <header className='fixed top-0 z-50 flex h-16 w-full items-center px-4'>
+        <nav className='mx-auto h-10 w-25 md:w-2/5'>
+          <ul
+            className='
+              flex flex-row items-center select-none overflow-x-auto rounded-2xl
+              bg-[var(--surface)] text-[var(--text)] whitespace-nowrap
+              scrollbar-hidden justify-around max-sm:pl-[14.5px] px-2 py-2
+            '
+          >
+            {sections.map((x) => (
+              <li key={x} className='px-3.5'>
+                <a href={`#${x}`}>
+                  {x === 'about-me'
+                    ? 'About Me'
+                    : x.charAt(0).toUpperCase() + x.slice(1)}
+                </a>
+              </li>
+            ))}
           </ul>
         </nav>
       </header>
