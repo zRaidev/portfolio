@@ -1,5 +1,6 @@
 function Navbar () {
   const sections = ['home', 'about-me', 'projects', 'habilities', 'contact']
+
   return (
     <div className='w-full'>
       <header className='fixed top-0 z-50 flex h-16 w-full items-center px-4'>
