@@ -9,7 +9,7 @@ function Navbar () {
             className='
               flex flex-row items-center select-none overflow-x-auto rounded-2xl
               bg-[var(--surface)] text-[var(--text)] whitespace-nowrap
-              scrollbar-hidden justify-around max-sm:pl-[14.5px] px-2 py-2
+              scrollbar-hidden justify-around max-md:pl-[14.5px] px-2 py-2
             '
           >
             {sections.map((x) => (
