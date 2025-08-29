@@ -35,14 +35,14 @@ function Hero () {
     return () => clearTimeout(timeout)
   }, [displayText, isDeleting, currentWordIndex])
   return (
-    <section id='home' className='flex flex-col items-center justify-center h-screen'>
-      <div className='block w-150 text-left'>
-        <h2 className='text-5xl font-semibold -mt-28'>Hi there!</h2>
+    <section id='home' className='flex flex-col items-center justify-center h-[90dvh] md:h-screen'>
+      <div className='block w-80 md:w-150 text-left'>
+        <h2 className='text-xl md:text-5xl font-semibold -mt-28'>Hi there!</h2>
         <div className='mt-6'>
-          <h2 className='inline text-5xl font-semibold'>I'm </h2><h1 className='inline text-5xl font-bold'>Isaac Vergara</h1>
+          <h2 className='inline text-xl md:text-5xl font-semibold'>I'm </h2><h1 className='inline text-xl md:text-5xl font-bold'>Isaac Vergara</h1>
         </div>
         <h2 className='mt-6'>
-          <span className="relative text-5xl font-semibold text-[--text] after:content-['|'] after:animate-blink">
+          <span className="relative text-xl md:text-5xl font-semibold text-[--text] after:content-['|'] after:animate-blink">
             {displayText}
           </span>
         </h2>
