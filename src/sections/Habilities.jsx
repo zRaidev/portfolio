@@ -63,9 +63,9 @@ function Habilities () {
   ]
 
   return (
-    <section id='habilities' className='mb-15 max-md:mt-40'>
+    <section id='habilities' className='mb-44 max-md:mt-40'>
       <h2 className='flex justify-center text-3xl md:text-5xl font-semibold mb-15'>Habilities</h2>
-      <div className='grid grid-rows-2 md:grid-cols-2 gap-10 mx-15'>
+      <div className='grid grid-rows-1 grid-cols-1 md:grid-cols-2 gap-10 mx-15'>
         {
           arrayElements.map((x, i) => (
             <BentoGrid key={i}>

@@ -25,7 +25,7 @@ function Projects () {
     }
   ]
   return (
-    <section id='projects' className='h-[100vhd]'>
+    <section id='projects' className='h-[100vh] md:h-[90vh]'>
       <h2 className='flex justify-center text-3xl md:text-5xl font-semibold mb-15'>Projects</h2>
       <div className='grid grid-rows-2 md:grid-cols-2 gap-8 mx-15'>
         {
