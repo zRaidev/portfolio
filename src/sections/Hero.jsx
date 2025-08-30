@@ -35,7 +35,7 @@ function Hero () {
     return () => clearTimeout(timeout)
   }, [displayText, isDeleting, currentWordIndex])
   return (
-    <section id='home' className='flex flex-col items-center justify-center h-[80   dvh] max-md:mt-36 md:h-screen'>
+    <section id='home' className='flex flex-col items-center justify-center h-[80dvh] max-md:mt-36 md:h-screen'>
       <div className='block w-80 md:w-150 text-left'>
         <h2 className='text-xl md:text-5xl font-semibold -mt-28'>Hi there!</h2>
         <div className='mt-6'>
