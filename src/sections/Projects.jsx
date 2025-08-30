@@ -1,8 +1,11 @@
+import { useState } from 'react'
 import BentoGrid from '../components/BentoGrid'
 import MathTestImage from '../assets/images/mathtest.webp'
 import PersonalProfileImage from '../assets/images/personal-profile.webp'
 
 function Projects () {
+  const [activeIndex, setActiveIndex] = useState(false)
+
   const projects = [
     {
       name: 'MathTest',
@@ -22,20 +25,23 @@ function Projects () {
     }
   ]
   return (
-    <section id='projects' className='h-[100vh]'>
-      <h2 className='flex justify-center text-5xl font-semibold mb-15'>Projects</h2>
-      <div className='grid grid-cols-2 gap-8'>
+    <section id='projects' className='h-[100vhd]'>
+      <h2 className='flex justify-center text-3xl md:text-5xl font-semibold mb-15'>Projects</h2>
+      <div className='grid grid-rows-2 md:grid-cols-2 gap-8 mx-15'>
         {
           projects.map((x, i) => {
             return (
               <BentoGrid key={i}>
                 <h3 className='font-medium text-xl'>{x.name}</h3>
-                <div className='relative group overflow-hidden rounded-xl shadow-lg'>
+                <div
+                  className='relative group overflow-hidden rounded-xl shadow-lg'
+                  onClick={() => setActiveIndex(activeIndex === i ? null : i)}
+                >
                   <img
                     src={x.image} alt={x.alt}
                     className='grayscale opacity-60 rounded-md'
                   />
-                  <div className='absolute inset-0 bg-black/60 translate-y-full group-hover:translate-y-0 transition-transform duration-250 flex flex-row justify-center items-center gap-4'>
+                  <div className={`absolute inset-0 bg-black/60 transition-transform duration-250 flex flex-row justify-center items-center gap-4 ${activeIndex === i ? 'translate-y-0' : 'translate-y-full'} md:group-hover:translate-y-0`}>
                     <a
                       href={x.github}
                       target='_blank'
