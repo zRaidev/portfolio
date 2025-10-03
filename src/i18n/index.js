@@ -1,4 +1,4 @@
-import en from './en.json'
+import en from './en'
 import es from './es.json'
 
 export const translations = {
