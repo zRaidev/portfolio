@@ -1,4 +1,7 @@
+import { useLanguage } from '../context/useLanguage.jsx'
+
 function Navbar () {
+  const { t } = useLanguage()
   const sections = ['home', 'about-me', 'projects', 'habilities', 'contact']
 
   return (
@@ -12,12 +15,10 @@ function Navbar () {
               scrollbar-hidden justify-around max-md:pl-[14.6px] px-2 py-2
             '
           >
-            {sections.map((x) => (
+            {sections.map((x, i) => (
               <li key={x} className='px-3.5'>
-                <a href={`#${x}`}>
-                  {x === 'about-me'
-                    ? 'About Me'
-                    : x.charAt(0).toUpperCase() + x.slice(1)}
+                <a href={`#${sections}`}>
+                  {t(`sections.${x}`)}
                 </a>
               </li>
             ))}

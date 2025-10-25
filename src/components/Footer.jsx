@@ -20,9 +20,19 @@ function Footer () {
         </div>
         <div>
           <span>Choose language</span>
-          <select className='ml-2 px-1 py-0.5 text-[var(--bg)]'>
-            <option value='light'>English</option>
-            <option value='dark'>Spanish</option>
+          <select
+            onChange={(e) => {
+              const lang = e.target.value
+              try {
+                window.localStorage.setItem('lang', lang)
+              } catch (err) {
+                console.error('Could not set language in localStorage', err)
+              }
+            }}
+            className='ml-2 px-1 py-0.5 text-[var(--bg)]'
+          >
+            <option value='en'>English</option>
+            <option value='es'>Spanish</option>
           </select>
         </div>
       </div>
