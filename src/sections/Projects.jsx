@@ -2,31 +2,33 @@ import { useState } from 'react'
 import BentoGrid from '../components/BentoGrid'
 import MathTestImage from '../assets/images/mathtest.webp'
 import PersonalProfileImage from '../assets/images/personal-profile.webp'
+import { useLanguage } from '../context/useLanguage.jsx'
 
 function Projects () {
+  const { t } = useLanguage()
   const [activeIndex, setActiveIndex] = useState(false)
 
   const projects = [
     {
-      name: 'MathTest',
+      name: t('projects.project1.projectName'),
       image: MathTestImage,
-      alt: 'Proyecto 1 - MathTest',
+      alt: t('projects.project1.alt'),
       github: 'https://github.com/zRaidev/MathTest',
       site: 'https://mathtest-umber.vercel.app/',
-      description: 'An interactive app to practice basic math skills like addition, subtraction, multiplication, and mixed operations.'
+      description: t('projects.project1.description')
     },
     {
-      name: 'Personal Profile',
+      name: t('projects.project2.projectName'),
       image: PersonalProfileImage,
-      alt: 'Proyecto 2 - Personal Profile',
+      alt: t('projects.project2.alt'),
       github: 'https://github.com/zRaidev/personal-profile',
       site: 'https://personal-profile-seven-kappa.vercel.app/',
-      description: 'A Linktree-style profile that centralizes personal or professional links in a simple, mobile-friendly interface.'
+      description: t('projects.project2.description')
     }
   ]
   return (
     <section id='projects' className='h-[100vh] md:h-[90vh]'>
-      <h2 className='flex justify-center text-3xl md:text-5xl font-semibold mb-15'>Projects</h2>
+      <h2 className='flex justify-center text-3xl md:text-5xl font-semibold mb-15'>{t('sections.projects')}</h2>
       <div className='grid grid-rows-2 md:grid-cols-2 gap-8 mx-15'>
         {
           projects.map((x, i) => (
@@ -55,7 +57,7 @@ function Projects () {
                     rel='noopener noreferrer'
                     className='px-4 py-2 bg-white text-black rounded-md font-semibold hover:bg-gray-200 transition'
                   >
-                    🌐 View site
+                    🌐 {t('projects.viewPage')}
                   </a>
                 </div>
               </div>

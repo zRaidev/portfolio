@@ -1,11 +1,14 @@
+import { useLanguage } from '../context/useLanguage.jsx'
+
 function Footer () {
+  const { t } = useLanguage()
   return (
     <footer className='p-4 text-center bg-[var(--surface)]'>
-      <p>&copy; {new Date().getFullYear()} Isaac Vergara. All rights reserved.</p>
-      <p>Designed & Developed by Isaac Vergara.</p>
+      <p>&copy; {t('footer.rights')}</p>
+      <p>{t('footer.madeBy')}</p>
       <div className='flex justify-center items-center gap-4 mt-2'>
         <div>
-          <span>Choose theme</span>
+          <span>{t('footer.theme')}</span>
           <select
             onChange={(e) => {
               const theme = e.target.value
@@ -14,12 +17,12 @@ function Footer () {
             className='ml-2 px-1 py-0.5 text-[var(--bg)]'
           >
             <option value='' />
-            <option value='light'>Light</option>
-            <option value='dark'>Dark</option>
+            <option value='light'>{t('footer.light')}</option>
+            <option value='dark'>{t('footer.dark')}</option>
           </select>
         </div>
         <div>
-          <span>Choose language</span>
+          <span>{t('footer.language')}</span>
           <select
             onChange={(e) => {
               const lang = e.target.value
@@ -31,13 +34,13 @@ function Footer () {
             }}
             className='ml-2 px-1 py-0.5 text-[var(--bg)]'
           >
-            <option value='en'>English</option>
-            <option value='es'>Spanish</option>
+            <option value='en'>{t('footer.english')}</option>
+            <option value='es'>{t('footer.spanish')}</option>
           </select>
         </div>
       </div>
       <div className='mt-1'>
-        <a className='text-gray-400' href='https://github.com/zRaidev/portfolio' target='__blank' rel='noopener noreferrer'>Visit my portfolio on Github</a>
+        <a className='text-gray-400' href='https://github.com/zRaidev/portfolio' target='__blank' rel='noopener noreferrer'>{t('footer.repository')}</a>
       </div>
     </footer>
   )

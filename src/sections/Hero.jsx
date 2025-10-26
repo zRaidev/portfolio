@@ -1,15 +1,18 @@
 import { useState, useEffect } from 'react'
 import '../assets/styles/Hero.css'
+import { useLanguage } from '../context/useLanguage.jsx'
 
-const words = ['Web Developer', 'Frontend Developer', 'Software Engineer Student']
 const typingSpeed = 150 // ms por carácter
 const deletingSpeed = 100 // ms por carácter al borrar
 const delayBetweenWords = 1500 // ms de pausa cuando termina la palabra
 
 function Hero () {
+  const { t } = useLanguage()
+
   const [currentWordIndex, setCurrentWordIndex] = useState(0)
   const [displayText, setDisplayText] = useState('')
   const [isDeleting, setIsDeleting] = useState(false)
+  const words = t('hero.roles', { returnObjects: true })
 
   useEffect(() => {
     const currentWord = words[currentWordIndex]
@@ -33,13 +36,13 @@ function Hero () {
     }
 
     return () => clearTimeout(timeout)
-  }, [displayText, isDeleting, currentWordIndex])
+  }, [displayText, isDeleting, currentWordIndex, words])
   return (
     <section id='home' className='flex flex-col items-center justify-center h-[80dvh] max-md:pt-36 md:h-screen'>
       <div className='block w-80 md:w-150 text-left'>
-        <h2 className='text-xl md:text-5xl font-semibold -mt-28'>Hi there!</h2>
+        <h2 className='text-xl md:text-5xl font-semibold -mt-28'>{t('hero.greeting')}</h2>
         <div className='mt-6'>
-          <h2 className='inline text-xl md:text-5xl font-semibold'>I'm </h2><h1 className='inline text-xl md:text-5xl font-bold'>Isaac Vergara</h1>
+          <h2 className='inline text-xl md:text-5xl font-semibold'>{t('hero.intro')} </h2><h1 className='inline text-xl md:text-5xl font-bold'>{t('hero.myName')}</h1>
         </div>
         <h2 className='mt-6'>
           <span className="relative text-xl md:text-5xl font-semibold text-[--text] after:content-['|'] after:animate-blink">

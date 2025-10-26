@@ -1,9 +1,11 @@
 import BentoGrid from '../components/BentoGrid.jsx'
+import { useLanguage } from '../context/useLanguage.jsx'
 
 function Habilities () {
+  const { t } = useLanguage()
   const arrayElements = [
     {
-      title: 'Technologies',
+      title: t('habilities.technologies'),
       items: [
         {
           name: 'HTML',
@@ -32,7 +34,7 @@ function Habilities () {
       ]
     },
     {
-      title: 'Tools',
+      title: t('habilities.tools'),
       items: [
         {
           name: 'Git',
@@ -64,12 +66,12 @@ function Habilities () {
 
   return (
     <section id='habilities' className='mb-44 max-md:mt-40'>
-      <h2 className='flex justify-center text-3xl md:text-5xl font-semibold mb-15'>Habilities</h2>
+      <h2 className='flex justify-center text-3xl md:text-5xl font-semibold mb-15'>{t('sections.habilities')}</h2>
       <div className='grid grid-rows-1 grid-cols-1 md:grid-cols-2 gap-10 mx-15'>
         {
           arrayElements.map((x, i) => (
             <BentoGrid key={i}>
-              <h3 className='text-2xl mb-10'>Technologies</h3>
+              <h3 className='text-2xl mb-10'>{x.title}</h3>
               <div className='grid grid-cols-2'>
                 {x.items.map((items, indexItems) => (
                   <div className='flex justify-center items-center flex-col mb-6' key={indexItems}>
