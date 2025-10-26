@@ -17,7 +17,7 @@ function Navbar () {
           >
             {sections.map((x, i) => (
               <li key={x} className='px-3.5'>
-                <a href={`#${sections}`}>
+                <a href={`#${sections[i]}`}>
                   {t(`sections.${x}`)}
                 </a>
               </li>
