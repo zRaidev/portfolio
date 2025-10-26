@@ -40,7 +40,8 @@ export default {
     description: 'Puedes contactarme en:',
     sendMail: 'Enviar un email',
     connect: 'Conectemos',
-    resume: 'Ver mi Currículum'
+    resume: 'Ver mi Currículum',
+    resumeLink: '/curriculum-vitae.pdf'
   },
   footer: {
     rights: `${new Date().getFullYear()} Isaac Vergara. Todos los derechos reservados.`,

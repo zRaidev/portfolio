@@ -30,7 +30,7 @@ function Contact () {
       </div>
 
       <div className='flex justify-center my-10'>
-        <a className='text-lg cursor-pointer hover:opacity-75' href='/resume.pdf' target='__blank'>{t('contact.resume')}</a>
+        <a className='text-lg cursor-pointer hover:opacity-75' href={t('contact.resumeLink')} target='__blank'>{t('contact.resume')}</a>
       </div>
     </section>
   )

@@ -40,7 +40,8 @@ export default {
     description: 'You can contact me on:',
     sendMail: 'Send an email',
     connect: "Let's connect",
-    resume: 'View my resume'
+    resume: 'View my resume',
+    resumeLink: '/resume.pdf'
   },
   footer: {
     rights: `${new Date().getFullYear()} Isaac Vergara. All rights reserved.`,
