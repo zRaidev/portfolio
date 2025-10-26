@@ -16,11 +16,14 @@ export default {
       'Software Engineer Student'
     ]
   },
+  aboutMe: {
+    description: "Hello! I'm Isaac, a Software Engineering student with an interest in web development and creating impactful technological solutions. I enjoy constantly learning, working on purpose-driven projects, and finding ways to improve user experience through design and functionality. I aspire to grow as a developer and add value by creating solutions to real-world problems."
+  },
   projects: {
     viewPage: 'View site',
     project1: {
       projectName: 'MathTest',
-      descriptions: 'An interactive app to practice basic math skills that I developed when I was younger using JavaScript, HTML, and CSS.',
+      description: 'An interactive app to practice basic math skills that I developed when I was younger using JavaScript, HTML, and CSS.',
       alt: 'Project 1 - MathTest'
     },
     project2: {
@@ -33,15 +36,14 @@ export default {
     technologies: 'Technologies',
     tools: 'Tools'
   },
-  aboutMe: {
+  contact: {
     description: 'You can contact me on:',
-    email: 'Email',
     sendMail: 'Send an email',
     connect: "Let's connect",
     resume: 'View my resume'
   },
   footer: {
-    rights: '© 2025 Isaac Vergara. All rights reserved.',
+    rights: `${new Date().getFullYear()} Isaac Vergara. All rights reserved.`,
     madeBy: 'Designed & Developed by Isaac Vergara.',
     theme: 'Choose theme',
     light: 'Light',

@@ -16,11 +16,14 @@ export default {
       'Estudiante de Ingeniería de Software'
     ]
   },
+  aboutMe: {
+    description: '¡Hola! Soy Isaac, un estudiante de Ingeniería de Software con interés en el desarrollo web y la creación de soluciones tecnológicas impactantes. Disfruto aprendiendo constantemente, trabajando en proyectos con propósito y encontrando formas de mejorar la experiencia del usuario a través del diseño y la funcionalidad. Aspiro a crecer como desarrollador y aportar valor creando soluciones a problemas del mundo real.'
+  },
   projects: {
     viewPage: 'Ver sitio',
     project1: {
       projectName: 'MathTest',
-      descriptions: 'Una aplicación interactiva para practicar habilidades matemáticas básicas que desarrollé cuando era más joven utilizando JavaScript, HTML y CSS.',
+      description: 'Una aplicación interactiva para practicar habilidades matemáticas básicas que desarrollé cuando era más joven utilizando JavaScript, HTML y CSS.',
       alt: 'Proyecto 1 - MathTest'
     },
     project2: {
@@ -33,15 +36,14 @@ export default {
     technologies: 'Tecnologías',
     tools: 'Herramientas'
   },
-  aboutMe: {
+  contact: {
     description: 'Puedes contactarme en:',
-    email: 'Email',
     sendMail: 'Enviar un email',
     connect: 'Conectemos',
-    resume: 'Ver mi CV'
+    resume: 'Ver mi Currículum'
   },
   footer: {
-    rights: '© 2025 Isaac Vergara. Todos los derechos reservados.',
+    rights: `${new Date().getFullYear()} Isaac Vergara. Todos los derechos reservados.`,
     madeBy: 'Diseñado y Desarrollado por Isaac Vergara.',
     theme: 'Elegir tema',
     light: 'Claro',
