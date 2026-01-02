@@ -10,24 +10,6 @@ function Footer () {
       <p>{t('footer.madeBy')}</p>
       <div className='flex justify-center items-center gap-4 mt-2'>
         <div>
-          <span>{t('footer.theme')}</span>
-          <select
-            onChange={(e) => {
-              const theme = e.target.value
-              if (theme === '') {
-                window.location.reload()
-              } else {
-                document.documentElement.classList.toggle('dark-theme', theme === 'dark')
-              }
-            }}
-            className='ml-2 px-1 py-0.5 text-[var(--bg)]'
-          >
-            <option value=''>System</option>
-            <option value='light'>{t('footer.light')}</option>
-            <option value='dark'>{t('footer.dark')}</option>
-          </select>
-        </div>
-        <div>
           <span>{t('footer.language')}</span>
           <select
             defaultValue={currentLang}
