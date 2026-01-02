@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Caja con Borde Neón - Estilo Apple</title>
+  <style>
+    /* Fondo general */
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #000;
+      font-family: "SF Pro Display", "Segoe UI", sans-serif;
+    }
+
+    /* Caja base */
+    .neon-box {
+      position: relative;
+      width: 260px;
+      height: 260px;
+      background-color: #0a0a0a;
+      border-radius: 24px;
+      overflow: hidden;
+    }
+
+    /* Borde animado */
+    .neon-box::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      padding: 2px;
+      border-radius: 24px;
+      background: linear-gradient(90deg, #5ac8fa, #64d2ff, #7d7aff, #5ac8fa);
+      background-size: 300% 300%;
+      animation: borderGlow 6s ease infinite;
+      filter: blur(4px);
+      -webkit-mask: 
+        linear-gradient(#000 0 0) content-box, 
+        linear-gradient(#000 0 0);
+      -webkit-mask-composite: xor;
+              mask-composite: exclude;
+    }
+
+    /* Contenido interno */
+    .inner-box {
+      position: absolute;
+      inset: 3px;
+      background: #0a0a0a;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+
+    /* Animación del gradiente */
+    @keyframes borderGlow {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="neon-box">
+    <div class="inner-box">
+      Apple Style Glow 🍏
+    </div>
+  </div>
+</body>
+</html>

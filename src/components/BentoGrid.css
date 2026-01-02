@@ -1,0 +1,62 @@
+/* --- Estilos para BentoGrid (Apple Neon) --- */
+
+/* Caja base */
+.neon-box {
+  position: relative;
+  background-color: transparent; /* Fondo transparente */
+  border-radius: 24px;       /* Borde redondeado (1.5rem) */
+  overflow: hidden;          /* Oculta el glow que se sale */
+}
+
+/* Borde animado (la magia está aquí) */
+.neon-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 2px; /* Grosor del borde */
+  border-radius: 24px; /* Debe coincidir con .neon-box */
+
+  /* El gradiente animado */
+  background: linear-gradient(90deg, #5ac8fa, #64d2ff, #7d7aff, #5ac8fa);
+  background-size: 300% 300%;
+  animation: borderGlow 6s ease infinite;
+
+  /* Efecto de "glow" */
+  filter: blur(4px);
+
+  /* Máscara para "recortar" el centro y dejar solo el borde (padding) */
+  -webkit-mask: 
+    linear-gradient(#000 0 0) content-box, 
+    linear-gradient(#000 0 0);
+  mask: 
+    linear-gradient(#000 0 0) content-box, 
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+}
+
+/* Contenido interno */
+.inner-box {
+  position: absolute;
+  inset: 3px; /* Espacio para el borde (2px) + 1px de separación */
+  background: transparent; /* Fondo transparente */
+  border-radius: 20px; /* Un radio ligeramente menor (24px - 3px) */
+  color: white;
+  
+  /* IMPORTANTE: El padding (p-10) se aplica directamente 
+    con Tailwind en el componente .jsx
+  */
+}
+
+/* Animación del gradiente */
+@keyframes borderGlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
