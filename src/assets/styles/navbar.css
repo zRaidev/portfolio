@@ -1,0 +1,49 @@
+/* Efecto de borde neón para el navbar */
+.navbar-neon {
+  position: relative;
+  background-color: var(--surface);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+/* Borde animado del navbar */
+.navbar-neon::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1.5px;
+  border-radius: 16px;
+  background: linear-gradient(90deg, #5ac8fa, #64d2ff, #7d7aff, #5ac8fa);
+  background-size: 300% 300%;
+  animation: navbarGlow 6s ease infinite;
+  filter: blur(1px);
+  -webkit-mask: 
+    linear-gradient(#000 0 0) content-box, 
+    linear-gradient(#000 0 0);
+  mask: 
+    linear-gradient(#000 0 0) content-box, 
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+/* Contenido interno del navbar */
+.navbar-inner {
+  position: relative;
+  z-index: 1;
+  backdrop-filter: blur(.25px);
+  border-radius: 15px;
+}
+
+/* Animación del gradiente */
+@keyframes navbarGlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

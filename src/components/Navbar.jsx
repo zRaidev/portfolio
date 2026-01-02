@@ -1,4 +1,5 @@
 import { useLanguage } from '../context/useLanguage.jsx'
+import '../assets/styles/navbar.css'
 
 function Navbar () {
   const { t } = useLanguage()
@@ -7,11 +8,11 @@ function Navbar () {
   return (
     <div className='w-full'>
       <header className='fixed top-0 z-50 flex h-16 w-full items-center px-4'>
-        <nav className='mx-auto h-10 w-24 md:w-2/5'>
+        <nav className='mx-auto h-10 w-24 md:w-2/5 navbar-neon'>
           <ul
             className='
-              flex flex-row items-center select-none overflow-x-auto rounded-2xl
-              bg-[var(--surface)] text-[var(--text)] whitespace-nowrap
+              navbar-inner flex flex-row items-center select-none overflow-x-auto
+              text-[var(--text)] whitespace-nowrap
               scrollbar-hidden justify-around max-md:pl-[14.6px] px-2 py-2
             '
           >
