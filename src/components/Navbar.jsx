@@ -25,15 +25,12 @@ function Navbar () {
   }, [])
 
   return (
-    <div className='w-full'>
+    <div className='w-full navbar-container'>
       <header className='fixed top-0 z-50 flex h-16 w-full items-center px-4'>
         <nav className='navbar first-navbar'>
           <ul
             className='
-              navbar-inner flex flex-row items-center select-none overflow-x-auto
-              text-(--text) whitespace-nowrap
-              scrollbar-hidden justify-around max-md:pl-[14.6px] px-2 py-2
-            '
+              flex flex-row items-center h-full align-middle select-none overflow-x-auto text-(--text) whitespace-nowrap scrollbar-hidden justify-around'
           >
             {sections.map((x, i) => (
               <li key={x} className='px-3.5'>

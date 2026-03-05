@@ -1,35 +1,37 @@
-.navbar {
-  margin-left: auto;
-  margin-right: auto;
-
-  height: 2.5rem;
-  width: 6rem;
-  border-radius: 1rem;
-
-  position: relative;
-  overflow: hidden;
+.navbar-container {
+  display: none;
 }
 
-.first-navbar {
-  background-color: var(--surface);
-
-  border: 2px solid rgba(63, 43, 150, 0);
-  box-shadow: 0 2px 20px rgba(145, 94, 255, 0);
-
-  transition: all 0.5s ease;
-}
-
-.second-navbar {
-  border: 2px solid rgba(63, 43, 150, 0.8);
-  backdrop-filter: blur(16px);
-  box-shadow: 0 2px 20px rgba(145, 94, 255, 0.25);
-
-  transition: all 0.5s ease;
-}
-
-/* md:w-2/5  (breakpoint md de Tailwind = 768px) */
 @media (min-width: 768px) {
+  .navbar-container {
+    display: block;
+  }
+
   .navbar {
-    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+
+    height: 2.5rem;
+    min-width: 40%;
+    border-radius: 1rem;
+
+    position: relative;
+    overflow: hidden;}
+
+  .first-navbar {
+    background-color: var(--surface);
+
+    border: 2px solid rgba(63, 43, 150, 0);
+    box-shadow: 0 2px 20px rgba(145, 94, 255, 0);
+
+    transition: all 0.5s ease;
+  }
+
+  .second-navbar {
+    border: 2px solid rgba(63, 43, 150, 0.8);
+    backdrop-filter: blur(16px);
+    box-shadow: 0 2px 20px rgba(145, 94, 255, 0.25);
+
+    transition: all 0.5s ease;
   }
 }
