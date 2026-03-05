@@ -6,7 +6,7 @@ function AboutMe () {
   const { t } = useLanguage()
 
   return (
-    <section id='about-me' className='h-[80vh] flex justify-center'>
+    <section id='about-me' className='h-[50vh] flex justify-center align-bottom'>
       <div className='flex flex-col md:flex-row items-center justify-center gap-10 p-4'>
         <BentoGrid className='w-auto md:w-150 h-auto border-white/20 mx-10'>
           <h2 className='text-3xl font-semibold mb-5'>{t('sections.about-me')}</h2>

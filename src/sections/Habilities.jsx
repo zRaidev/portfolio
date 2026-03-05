@@ -65,7 +65,7 @@ function Habilities () {
   ]
 
   return (
-    <section id='habilities' className='mb-44 max-md:mt-40'>
+    <section id='habilities' className='max-md:mt-40 pt-30'>
       <h2 className='flex justify-center text-3xl md:text-5xl font-semibold mb-15'>{t('sections.habilities')}</h2>
       <div className='grid grid-rows-1 grid-cols-1 md:grid-cols-2 gap-10 mx-15'>
         {

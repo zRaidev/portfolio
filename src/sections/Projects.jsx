@@ -27,9 +27,9 @@ function Projects () {
     }
   ]
   return (
-    <section id='projects' className='h-[100vh] md:h-[90vh]'>
+    <section id='projects' className='h-[75vh] pt-30'>
       <h2 className='flex justify-center text-3xl md:text-5xl font-semibold mb-15'>{t('sections.projects')}</h2>
-      <div className='grid grid-rows-2 md:grid-cols-2 gap-8 mx-15'>
+      <div className='grid md:grid-cols-2 gap-8 mx-15'>
         {
           projects.map((x, i) => (
             <BentoGrid key={i}>

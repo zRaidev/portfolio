@@ -5,7 +5,7 @@ function Contact () {
   const { t } = useLanguage()
   return (
     <section id='contact'>
-      <div className='flex flex-col mt-20 mb-10'>
+      <div className='flex flex-col pt-45 mb-10'>
         <h2 className='text-4xl font-bold flex justify-center'>{t('sections.contact')}</h2>
         <p className='flex justify-center'>{t('contact.description')}</p>
       </div>
