@@ -1,0 +1,7 @@
+.skill-item svg {
+  transition: filter 0.3s ease;
+}
+
+.skill-item:hover svg {
+  filter: drop-shadow(0 0 0.75rem var(--shadow-color));
+}
