@@ -5,7 +5,7 @@ function Footer () {
   const currentLang = (typeof window !== 'undefined' && window.localStorage.getItem('lang')) || 'es'
 
   return (
-    <footer className='p-4 text-center bg-[var(--surface)]'>
+    <footer className='p-4 text-center bg-(--surface)'>
       <p>&copy; {t('footer.rights')}</p>
       <p>{t('footer.madeBy')}</p>
       <div className='flex justify-center items-center gap-4 mt-2'>
@@ -22,7 +22,7 @@ function Footer () {
                 console.error('Could not set language in localStorage', err)
               }
             }}
-            className='ml-2 px-1 py-0.5 text-[var(--bg)]'
+            className='ml-2 px-1 py-0.5 text-(--bg) bg-(--surface) rounded focus:outline-none focus:ring-2'
           >
             <option value='es'>{t('footer.spanish')}</option>
             <option value='en'>{t('footer.english')}</option>
