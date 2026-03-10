@@ -18,3 +18,7 @@
   --text: #F1F5F9;
   --accent: #3B82F6;
 }
+
+html {
+  scroll-behavior: smooth;
+}
