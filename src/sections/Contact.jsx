@@ -1,5 +1,5 @@
-import ContactCards from '../components/ContactCards.jsx'
-import { useLanguage } from '../context/useLanguage.jsx'
+import ContactCards from '@/components/ContactCards.jsx'
+import { useLanguage } from '@/context/useLanguage.jsx'
 
 function Contact () {
   const { t } = useLanguage()

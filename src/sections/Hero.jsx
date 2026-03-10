@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
-import '../assets/styles/Hero.css'
-import { useLanguage } from '../context/useLanguage.jsx'
+import '@/assets/styles/Hero.css'
+import { useLanguage } from '@/context/useLanguage.jsx'
 
 const typingSpeed = 150 // ms por carácter
 const deletingSpeed = 100 // ms por carácter al borrar

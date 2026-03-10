@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import BentoGrid from '../components/BentoGrid'
-import MathTestImage from '../assets/images/mathtest.webp'
-import PersonalProfileImage from '../assets/images/personal-profile.webp'
-import { useLanguage } from '../context/useLanguage.jsx'
+import BentoGrid from '@/components/BentoGrid'
+import MathTestImage from '@/assets/images/mathtest.webp'
+import PersonalProfileImage from '@/assets/images/personal-profile.webp'
+import { useLanguage } from '@/context/useLanguage.jsx'
 
 function Projects () {
   const { t } = useLanguage()

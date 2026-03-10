@@ -1,6 +1,6 @@
-import BentoGrid from '../components/BentoGrid.jsx'
-import ProfilePicture from '../assets/images/linkedin-profile.webp'
-import { useLanguage } from '../context/useLanguage.jsx'
+import BentoGrid from '@/components/BentoGrid.jsx'
+import ProfilePicture from '@/assets/images/linkedin-profile.webp'
+import { useLanguage } from '@/context/useLanguage.jsx'
 
 function AboutMe () {
   const { t } = useLanguage()

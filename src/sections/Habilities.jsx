@@ -1,6 +1,6 @@
-import BentoGrid from '../components/BentoGrid.jsx'
-import { useLanguage } from '../context/useLanguage.jsx'
-import '../assets/styles/habilities.css'
+import BentoGrid from '@/components/BentoGrid.jsx'
+import { useLanguage } from '@/context/useLanguage.jsx'
+import '@/assets/styles/habilities.css'
 
 function Habilities () {
   const { t } = useLanguage()
