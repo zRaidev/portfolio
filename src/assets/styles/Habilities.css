@@ -1,7 +1,26 @@
 .skill-item svg {
-  transition: filter 0.3s ease;
+  animation: fadeOut 2s forwards;
 }
 
 .skill-item:hover svg {
-  filter: drop-shadow(0 0 0.75rem var(--shadow-color));
+  animation: fadeIn 1s forwards;
+
+}
+
+@keyframes fadeIn {
+  from {
+    filter: drop-shadow(0 0 0 var(--shadow-color));
+  }
+  to {
+    filter: drop-shadow(0 0 3rem var(--shadow-color));
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    filter: drop-shadow(0 0 3rem var(--shadow-color));
+  }
+  to {
+    filter: drop-shadow(0 0 0 var(--shadow-color));
+  }
 }
