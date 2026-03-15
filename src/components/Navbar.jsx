@@ -9,7 +9,6 @@ function Navbar () {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY
-      console.log(scrollY)
 
       if (scrollY > 1) {
         document.querySelector('.navbar').classList.add('second-navbar')
